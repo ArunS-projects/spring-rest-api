@@ -12,19 +12,19 @@ public class MyInterceptor implements HandlerInterceptor {
     private final Logger logger = LoggerFactory.getLogger(MyInterceptor.class);
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        System.out.println("preHandle "+request.getContextPath());
+        System.out.println("MyInterceptor preHandle "+request.getContextPath());
         return true;
     }
 
 
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)
             throws Exception {
-        System.out.println("postHandle");
+        System.out.println("MyInterceptor postHandle");
     }
 
 
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
             throws Exception {
-        System.out.println("afterCompletion");
+        System.out.println("MyInterceptor afterCompletion");
     }
 }

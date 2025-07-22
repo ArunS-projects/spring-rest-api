@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 public class FilterConfig {
 
     @Bean
-    public FilterRegistrationBean<CustomFilter> customFilterFilterRegistrationBean(){
+    public FilterRegistrationBean<CustomFilter> customFilterFilterRegistrationBean() {
 
         FilterRegistrationBean<CustomFilter> filterRegistrationBean = new FilterRegistrationBean<>();
-        filterRegistrationBean.setFilter( new CustomFilter());
+        filterRegistrationBean.setFilter(new CustomFilter());
 
         return filterRegistrationBean;
     }

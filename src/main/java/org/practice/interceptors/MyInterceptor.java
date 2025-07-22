@@ -10,9 +10,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class MyInterceptor implements HandlerInterceptor {
 
     private final Logger logger = LoggerFactory.getLogger(MyInterceptor.class);
+
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        System.out.println("MyInterceptor preHandle "+request.getContextPath());
+        System.out.println("MyInterceptor preHandle " + request.getContextPath());
         return true;
     }
 
